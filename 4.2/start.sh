@@ -27,6 +27,7 @@ if [ ! -f ${IMPORT_FINISHED} ]; then
 else
   chown -R nominatim:nominatim ${PROJECT_DIR}
 fi
+chown postgres /var/lib/postgresql/14/main
 
 service postgresql start
 
