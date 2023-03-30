@@ -32,7 +32,7 @@ service postgresql start
 
 cd ${PROJECT_DIR} && sudo -E -u nominatim nominatim refresh --website --functions
 
-service apache2 start
+service nginx start
 
 # start continous replication process
 if [ "$REPLICATION_URL" != "" ] && [ "$FREEZE" != "true" ]; then
